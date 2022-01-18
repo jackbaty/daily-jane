@@ -7,7 +7,7 @@
         </span>
       {{ end }}
       {{ if eq .Title (now.Format "Monday, January 2, 2006") }}
-        <a class="post-link" href="{{ .RelPermalink }}">Today</a>
+        <a class="post-link" href="{{ .RelPermalink }}">Today - {{ .Title }}</a>
       {{ else }}
         <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}
