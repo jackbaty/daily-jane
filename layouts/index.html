@@ -6,7 +6,7 @@
   {{ end }}
   {{ $paginator := .Paginate $pages }}
   {{ range $paginator.Pages }}
-    {{ .Render "summary" }}
+  {{ .Render "summary" }}
   {{ end }}
 </section>
 
