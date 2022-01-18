@@ -6,7 +6,11 @@
           {{ partial "svg/pinned.svg" }}
         </span>
       {{ end }}
-      <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ if eq .Title (now.Format "Monday, January 2, 2006") }}
+        <a class="post-link" href="{{ .RelPermalink }}">Today</a>
+      {{ else }}
+        <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ end }}
     </h1>
     {{ partial "post/i18nlist.html" . }}
     <div class="post-meta">
